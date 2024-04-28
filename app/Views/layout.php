@@ -32,8 +32,6 @@
     <link href="<?=base_url('css/style.css')?>" rel="stylesheet">
 </head>
 
-<?=$this->renderSection('mainbody') ?>
-
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -42,8 +40,7 @@
         </div>
     </div>
     <!-- Spinner End -->
-
-
+    
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
@@ -72,12 +69,14 @@
     </nav>
     <!-- Navbar End -->
 
+    <?=$this->renderSection('mainbody') ?>
+
         <!-- Copyright Start -->
         <div class="container-fluid bg-dark text-white py-4">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom text-secondary" href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <span id="year"></span> by <a class="border-bottom text-secondary" href="#">FAFR</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
@@ -98,17 +97,20 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="<?=base_url('lib/wow/wow.min.js')?>"></script>
+    <script src="<?=base_url('lib/easing/easing.min.js')?>"></script>
+    <script src="<?=base_url('lib/waypoints/waypoints.min.js')?>"></script>
+    <script src="<?=base_url('lib/typed/typed.min.js')?>"></script>
+    <script src="<?=base_url('lib/counterup/counterup.min.js')?>"></script>
+    <script src="<?=base_url('lib/owlcarousel/owl.carousel.min.js')?>"></script>
+    <script src="<?=base_url('lib/isotope/isotope.pkgd.min.js')?>"></script>
+    <script src="<?=base_url('lib/lightbox/js/lightbox.min.js')?>"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="<?=base_url('js/main.js')?>"></script>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
