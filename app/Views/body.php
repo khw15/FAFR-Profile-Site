@@ -8,7 +8,7 @@
                 <div class="col-lg-6 py-6 pb-0 pt-lg-0">
                     <h3 class="text-primary mb-3">I'm</h3>
                     <!-- Read from database -->
-                    <h1 class="display-3 mb-3">Faisal Al-Munawar Fathur Rahman</h1>
+                    <h1 class="display-3 mb-3">FAFR</h1>
                     <h2 class="typed-text-output d-inline"></h2>
                     <div class="typed-text d-none">DevOps Developer, Front-end Developer, Back-end Developer</div>
                     <div class="d-flex align-items-center pt-5">
