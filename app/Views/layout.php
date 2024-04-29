@@ -67,6 +67,19 @@
     <!-- Navbar End -->
 
     <?=$this->renderSection('mainbody') ?>
+    
+            <!-- Map Start -->
+            <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="container-xxl pt-5 px-0">
+                    <div class="bg-dark">
+                        <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63369.776114049164!2d106.83936771026215!3d-6.937007543903113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e683633fcd15215%3A0x261f558445241e0c!2sUniversitas%20Muhammadiyah%20Sukabumi!5e0!3m2!1sen!2sbd!4v1714375920015!5m2!1sen!2sbd"
+                        frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- Map End -->
 
         <!-- Copyright Start -->
         <div class="container-fluid bg-dark text-white py-4">
