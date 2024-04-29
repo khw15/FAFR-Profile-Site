@@ -9,8 +9,15 @@ class Home extends BaseController
         return view('welcome_message');
     }
 
-    public function body(): string
+    public function body()
     {
-        return view('body');
+
+        $data = [
+            'title' => 'FFFFFF',
+            'name' => 'Name'
+        ];
+
+
+        return view('body', $data);
     }
 }
