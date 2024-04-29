@@ -13,11 +13,6 @@
                     <div class="typed-text d-none">DevOps Developer, Front-end Developer, Back-end Developer</div>
                     <div class="d-flex align-items-center pt-5">
                         <a href="<?=base_url('documents/CV.pdf')?>" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
-                        <!-- <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                            <span></span>
-                        </button>
-                        <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5> -->
                     </div>
                 </div>
                 <div class="col-lg-6">
