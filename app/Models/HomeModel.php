@@ -31,4 +31,18 @@ class HomeModel extends Model
             ->where(['id' => 1])
             ->first();
     }
+
+    public function getEmail()
+    {
+        return $this->asArray()
+            ->where(['id' => 1])
+            ->first();
+    }
+
+    public function getPhone()
+    {
+        return $this->asArray()
+            ->where(['id' => 1])
+            ->first();
+    }
 }

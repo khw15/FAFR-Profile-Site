@@ -31,6 +31,8 @@ class Home extends BaseController
             'name' => (new HomeModel())->getName()['name'],
             'skills' => (new HomeModel())->getSkills()['skill'],
             'introduction' => (new HomeModel())->getIntroduction()['introduction'],
+            'email' => (new HomeModel())->getEmail()['email'],
+            'phone' => (new HomeModel())->getPhone()['phone'],
 
             // Education
             'education' => $education, // Store education data under 'education' key
