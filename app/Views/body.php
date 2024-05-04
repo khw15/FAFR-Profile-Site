@@ -68,7 +68,7 @@
                                 <div class="skill mb-4">
                                     <div class="d-flex justify-content-between">
                                         <h6 class="font-weight-bold"><?= $tech_stack['tech_name'] ?></h6>
-                                        <!-- <h6 class="font-weight-bold"><?= $tech_stack['percentage'] ?>%</h6> -->
+                                        <h6 class="font-weight-bold"><?= $tech_stack['percentage'] ?>%</h6>
                                     </div>
                                     <div class="progress">
                                         <div class="progress-bar bg-info" role="progressbar" aria-valuenow="<?= $tech_stack['percentage'] ?>" aria-valuemin="0" aria-valuemax="100"></div>
@@ -90,30 +90,15 @@
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
                             <div class="row gy-5 gx-4">
-                                <div class="col-sm-6">
-                                    <h5>UI Designer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>Product Designer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>Web Designer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>Apps Designer</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">2000 - 2045</p>
-                                    <h6 class="mb-0">Apex Software Inc</h6>
-                                </div>
+                                <?php foreach ($experience as $exp): ?>
+                                    <div class="col-sm-6">
+                                        <h5><?= $exp['name'] ?></h5>
+                                        <hr class="text-primary my-2">
+                                        <p class="text-primary mb-1"><?= $exp['start_month'] ?> <?= $exp['start_year'] ?> - <?= $exp['end_month'] ?> <?= $exp['end_year'] ?></p>
+                                        <h6 class="mb-0"><?= $exp['workplace'] ?></h6>
+                                        <h6 class="mb-0"><?= $exp['working_type'] ?></h6>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                         <div id="tab-2" class="tab-pane fade show p-0">

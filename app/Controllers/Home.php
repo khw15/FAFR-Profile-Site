@@ -4,6 +4,7 @@ namespace App\Controllers;
 use App\Models\HomeModel;
 use App\Models\EduModel;
 use App\Models\SkillModel;
+use App\Models\ExpModel;
 
 class Home extends BaseController
 {
@@ -14,10 +15,15 @@ class Home extends BaseController
 
     public function body()
     {
+        // Education
         $eduModel = new EduModel();
         $education = $eduModel->findAll();
+        // Tech Stack
         $tech_stack = new SkillModel();
         $tech_stacks = $tech_stack->findAll();
+        // Experience
+        $expModel = new ExpModel();
+        $experience = $expModel->findAll();
 
         $data = [
             'title' => 'FAFR Portfolio with CodeIgniter 4',
@@ -30,7 +36,10 @@ class Home extends BaseController
             'education' => $education, // Store education data under 'education' key
 
             // Tech Stack
-            'stacks' => $tech_stacks // Store tech stack data under 'tech_stacks' key
+            'stacks' => $tech_stacks, // Store tech stack data under 'tech_stacks' key
+
+            // Experience
+            'experience' => $experience // Store experience data under 'experience' key
         ];
 
 
