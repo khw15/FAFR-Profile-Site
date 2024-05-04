@@ -6,6 +6,7 @@ use App\Models\EduModel;
 use App\Models\SkillModel;
 use App\Models\ExpModel;
 use App\Models\ProjectModel;
+use App\Models\SocialsModel;
 
 class Home extends BaseController
 {
@@ -48,7 +49,12 @@ class Home extends BaseController
             'experience' => $experience, // Store experience data under 'experience' key
 
             // Project
-            'projects' => $projects // Store project data under 'projects' key
+            'projects' => $projects, // Store project data under 'projects' key
+
+            // Socials
+            'github' => (new SocialsModel())->getGithub()['github'],
+            'discord' => (new SocialsModel())->getDiscord()['discord'],
+            'linkedin' => (new SocialsModel())->getLinkedin()['linkedin']
         ];
 
 

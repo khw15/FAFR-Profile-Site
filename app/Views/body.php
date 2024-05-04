@@ -157,7 +157,7 @@
         <div class="container py-5">
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">Let's Work Together</h1>
+                    <h1 class="display-5 mb-0">Get in Touch</h1>
                 </div>
                 <div class="col-lg-6 text-lg-end">
                     <a class="btn btn-primary py-3 px-5" href="">Say Hello</a>
@@ -171,11 +171,11 @@
                     <p class="mb-2">Mail me:</p>
                     <h3 class="fw-bold"><a href="mailto:<?=$email?>"><?=$email?></a></h3>
                     <hr class="w-100">
-                    <p class="mb-2">Get in touch:</p>
+                    <p class="mb-2">Follow me:</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-primary me-2" href="https://github.com/khw15"><i class="fab fa-github"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/fafr/"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="https://discordapp.com/users/440894254408007690"><i class="fab fa-discord"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="<?=$github?>"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="<?=$linkedin?>"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="<?=$discord?>"><i class="fab fa-discord"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
