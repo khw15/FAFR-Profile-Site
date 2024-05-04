@@ -14,6 +14,10 @@ class Home extends BaseController
 
     public function body()
     {
+        $eduModel = new EduModel();
+        $education = $eduModel->findAll();
+        $tech_stack = new SkillModel();
+        $tech_stacks = $tech_stack->findAll();
 
         $data = [
             'title' => 'FAFR Portfolio with CodeIgniter 4',
@@ -23,10 +27,10 @@ class Home extends BaseController
             'introduction' => (new HomeModel())->getIntroduction()['introduction'],
 
             // Education
-            'school_name' => (new EduModel())->getSchoolName()['school_name'],
-            'year_start' => (new EduModel())->getYearStart()['year_start'],
-            'year_end' => (new EduModel())->getYearEnd()['year_end'],
-            'department' => (new EduModel())->getDepartment()['department']
+            'education' => $education, // Store education data under 'education' key
+
+            // Tech Stack
+            'stacks' => $tech_stacks // Store tech stack data under 'tech_stacks' key
         ];
 
 
