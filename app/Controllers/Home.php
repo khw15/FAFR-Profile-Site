@@ -5,7 +5,6 @@ use App\Models\HomeModel;
 use App\Models\EduModel;
 use App\Models\SkillModel;
 use App\Models\ExpModel;
-use App\Models\ProjectModel;
 
 class Home extends BaseController
 {
@@ -25,9 +24,6 @@ class Home extends BaseController
         // Experience
         $expModel = new ExpModel();
         $experience = $expModel->findAll();
-        // Project
-        $projectModel = new ProjectModel();
-        $projects = $projectModel->findAll();
 
         $data = [
             'title' => 'FAFR Portfolio with CodeIgniter 4',
@@ -45,10 +41,7 @@ class Home extends BaseController
             'stacks' => $tech_stacks, // Store tech stack data under 'tech_stacks' key
 
             // Experience
-            'experience' => $experience, // Store experience data under 'experience' key
-
-            // Project
-            'projects' => $projects // Store project data under 'projects' key
+            'experience' => $experience // Store experience data under 'experience' key
         ];
 
 
