@@ -196,7 +196,7 @@
     <!-- Projects End -->
 
     <!-- Contact Start -->
-    <div class="container-xxl pb-5" id="contact">
+    <div class="container-xxl pb-0" id="contact">
         <div class="container py-5">
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">

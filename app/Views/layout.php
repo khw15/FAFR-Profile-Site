@@ -68,30 +68,25 @@
 
     <?=$this->renderSection('mainbody') ?>
     
-            <!-- Map Start -->
-            <div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="container-xxl pt-5 px-0">
-                    <div class="bg-dark">
-                        <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63369.776114049164!2d106.83936771026215!3d-6.937007543903113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e683633fcd15215%3A0x261f558445241e0c!2sUniversitas%20Muhammadiyah%20Sukabumi!5e0!3m2!1sen!2sbd!4v1714375920015!5m2!1sen!2sbd"
-                        frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
-                    </div>
+        <!-- Map Start -->
+        <div class="container-xxl pt-0 px-0 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container-xxl pt-3 px-0">
+                <div class="bg-dark">
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63369.95080869659!2d106.87456694162083!3d-6.935709224350201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68481f0379ab33%3A0xf53d53a9ce28325d!2sSukabumi%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1714828678696!5m2!1sen!2sid"
+                    frameborder="0" style="width: 100%; height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
                 </div>
             </div>
-            <!-- Map End -->
+        </div>
+        <!-- Map End -->
 
         <!-- Copyright Start -->
-        <div class="container-fluid bg-dark text-white py-4">
+        <div class="container-fluid bg-dark text-white py-4 mt-4">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <span id="year"></span> by <a class="border-bottom text-secondary" href="#">FAFR</a>, All Right Reserved.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a>
-                        <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
                     </div>
                 </div>
             </div>
