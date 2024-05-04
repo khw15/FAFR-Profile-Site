@@ -136,60 +136,19 @@
                 </div>
             </div>
             <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-4 col-md-6 portfolio-item front-end">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-1.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                <?php foreach ($projects as $project): ?>
+                    <div class="col-lg-4 col-md-6 portfolio-item <?= $project['type'] ?>">
+                        <div class="portfolio-wrap">
+                            <img src="<?=base_url('img/' . $project['image_filename'])?>.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4><?= $project['name'] ?></h4>
+                                <div class="portfolio-links">
+                                    <a href="<?= $project['github_link'] ?>" title="More Details"><i class="bi bi-link"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item back-end">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-2.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item front-end">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-3.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item back-end">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-4.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-5.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item back-end">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img class="img-fluid" src="img/project-6.jpg" alt="">
-                        <div class="portfolio-btn">
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
