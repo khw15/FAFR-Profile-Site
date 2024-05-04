@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\HomeModel;
 
 class Home extends BaseController
 {
@@ -13,8 +14,10 @@ class Home extends BaseController
     {
 
         $data = [
-            'title' => 'FFFFFF',
-            'name' => 'Name'
+            'title' => 'FAFR Portfolio with CodeIgniter 4',
+            // Read from the HomeModel
+            'name' => (new HomeModel())->getName()['name'],
+            'skills' => (new HomeModel())->getSkills()['skill']
         ];
 
 

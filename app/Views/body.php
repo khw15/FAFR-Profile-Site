@@ -10,7 +10,7 @@
                     <!-- Read from database -->
                     <h1 class="display-3 mb-3"><?=$name?></h1>
                     <h2 class="typed-text-output d-inline"></h2>
-                    <div class="typed-text d-none">DevOps Developer, Front-end Developer, Back-end Developer</div>
+                    <div class="typed-text d-none"><?=$skills?></div>
                     <div class="d-flex align-items-center pt-5">
                         <a href="<?=base_url('documents/CV.pdf')?>" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
                     </div>
