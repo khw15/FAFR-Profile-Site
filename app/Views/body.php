@@ -253,6 +253,7 @@
                                 <button type="submit" class="btn btn-primary py-3 px-4">Send Message</button>
                             </div>
                         </div>
+                    </form>
                 </div>
             </div>
         </div>
