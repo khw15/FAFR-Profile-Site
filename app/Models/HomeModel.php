@@ -8,7 +8,7 @@ class HomeModel extends Model
 {
     protected $table = 'fafr';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['name', 'skill'];
+    protected $allowedFields = ['name', 'skill', 'introduction'];
 
     // Read name column from fafr table, where id = 1, and convert it to a string
     public function getName()
@@ -19,6 +19,13 @@ class HomeModel extends Model
     }
 
     public function getSkills()
+    {
+        return $this->asArray()
+            ->where(['id' => 1])
+            ->first();
+    }
+    
+    public function getIntroduction()
     {
         return $this->asArray()
             ->where(['id' => 1])
