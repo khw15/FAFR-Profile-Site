@@ -14,7 +14,7 @@ class Home extends BaseController
 
         $data = [
             'title' => 'FFFFFF',
-            'name' => 'Faisal A F R',
+            'name' => 'Name'
         ];
 
 

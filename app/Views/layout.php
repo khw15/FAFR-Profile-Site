@@ -21,9 +21,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha512-TyUaMbYrKFZfQfp+9nQGOEt+vGu4nKzLk0KaV3nFifL3K8n7lzb8DayTzLOK0pNyzxGJzGRSw78e8xqJhURJ3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" integrity="sha512-EIeyz8jygFLurz4RBJgtb2xBcR7uGWs6Gr6qygPowG13vYlYIaln5FyH+DN+da3jwPtb3Dq+pLA9yTR+uB3FYg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" integrity="sha512-GqP/pjlymwlPb6Vd7KmT5YbapvowpteRq9ffvufiXYZp0YpMTtR9tI6/v3U3hFi1N9MQmXum/yBfELxoY+S1Mw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="<?=base_url('lib/animate/animate.min.css')?>" rel="stylesheet">
+    <link href="<?=base_url('lib/lightbox/css/lightbox.min.css')?>" rel="stylesheet">
+    <link href="<?=base_url('lib/owlcarousel/assets/owl.carousel.min.css')?>" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="<?=base_url('css/bootstrap.min.css')?>" rel="stylesheet">
@@ -111,10 +111,10 @@
     <script src="<?=base_url('lib/easing/easing.min.js')?>"></script>
     <script src="<?=base_url('lib/waypoints/waypoints.min.js')?>"></script>
     <script src="<?=base_url('lib/typed/typed.min.js')?>"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.1.0/countUp.min.js" integrity="sha512-zUNImSiNpN9gnR1NVzuJQzjwfildea7KtT8+7hUu2pgBv9TvimIECnfVmJiaJlValxaFLz4jrfVySDsUJN6QZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js" integrity="sha512-lo4YgiwkxsVIJ5mex2b+VHUKlInSK2pFtkGFRzHsAL64/ZO5vaiCPmdGP3qZq1h9MzZzghrpDP336ScWugUMTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.5/isotope.pkgd.min.js" integrity="sha512-pTyLt2tKREvSiNYM21FRWRQtjOt/hZNYI+BRQx9yDObvcIydJ+3Ds/DxAKT/vK7D7ekSFfpubYh7ckity28MKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js" integrity="sha512-nUUXyEC/xe6BRSl6eTPMaXErp5wdoftIGgrCBRd51MmwMn9PnN+X2usTJb7sGphsXtKT335xWAbccalopgcjNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="<?=base_url('lib/counterup/counterup.min.js')?>"></script>
+    <script src="<?=base_url('lib/owlcarousel/owl.carousel.min.js')?>"></script>
+    <script src="<?=base_url('lib/isotope/isotope.pkgd.min.js')?>"></script>
+    <script src="<?=base_url('lib/lightbox/js/lightbox.min.js')?>"></script>
 
     <!-- Template Javascript -->
     <script src="<?=base_url('js/main.js')?>"></script>
