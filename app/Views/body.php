@@ -130,13 +130,13 @@
                 <div class="col-lg-6 text-lg-end">
                     <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
                         <li class="mx-3 active" data-filter="*">All Projects</li>
-                        <li class="mx-3" data-filter=".first">Front-end</li>
-                        <li class="mx-3" data-filter=".second">Back-end</li>
+                        <li class="mx-3" data-filter=".front-end">Front-end</li>
+                        <li class="mx-3" data-filter=".back-end">Back-end</li>
                     </ul>
                 </div>
             </div>
             <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-4 col-md-6 portfolio-item first">
+                <div class="col-lg-4 col-md-6 portfolio-item front-end">
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/project-1.jpg" alt="">
                         <div class="portfolio-btn">
@@ -145,7 +145,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
+                <div class="col-lg-4 col-md-6 portfolio-item back-end">
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/project-2.jpg" alt="">
                         <div class="portfolio-btn">
@@ -154,7 +154,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first">
+                <div class="col-lg-4 col-md-6 portfolio-item front-end">
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/project-3.jpg" alt="">
                         <div class="portfolio-btn">
@@ -163,7 +163,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
+                <div class="col-lg-4 col-md-6 portfolio-item back-end">
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/project-4.jpg" alt="">
                         <div class="portfolio-btn">
@@ -181,7 +181,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second">
+                <div class="col-lg-4 col-md-6 portfolio-item back-end">
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/project-6.jpg" alt="">
                         <div class="portfolio-btn">
