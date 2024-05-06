@@ -7,11 +7,11 @@ use CodeIgniter\Model;
 class ExpModel extends Model
 {
     protected $table = 'exp';
-    protected $allowedFields = ['name', 'start_month', 'start_year', 'end_month', 'end_year', 'workplace', 'working_type'];
 
     public function getAll()
     {
-        return $this->asArray()
-            ->findAll();
+        return $this->db->table($this->table)
+                    ->get()
+                    ->getResultArray();
     }
 }

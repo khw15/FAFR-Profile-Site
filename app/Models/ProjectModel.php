@@ -7,11 +7,11 @@ use CodeIgniter\Model;
 class ProjectModel extends Model
 {
     protected $table = 'projects';
-    protected $allowedFields = ['name', 'type', 'github_link', 'image_filename'];
 
     public function getAll()
     {
-        return $this->asArray()
-            ->findAll();
+        return $this->db->table($this->table)
+                    ->get()
+                    ->getResultArray();
     }
 }

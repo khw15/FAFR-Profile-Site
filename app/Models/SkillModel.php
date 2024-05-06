@@ -7,7 +7,6 @@ use CodeIgniter\Model;
 class SkillModel extends Model
 {
     protected $table = 'tech_stack';
-    protected $allowedFields = ['tech_name', 'percentage'];
 
     public function getTechName()
     {
