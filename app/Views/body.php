@@ -60,7 +60,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="display-5 mb-5">Tech Stack & Experience</h1>
-                    <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum clita dolor duo clita sit.</p>
+                    <p class="mb-4">I've mastered a comprehensive set of tech stacks, ensuring seamless development across various platforms.</p>
                     <h3 class="mb-4">Tech Stack</h3>
                     <div class="row align-items-center">
                         <?php foreach ($stacks as $tech_stack): ?>
