@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 04, 2024 at 03:00 PM
+-- Generation Time: May 06, 2024 at 03:32 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `profiles`
+-- Database: `myid1_profiles`
 --
 
 -- --------------------------------------------------------
@@ -33,7 +33,7 @@ CREATE TABLE `education` (
   `year_start` int NOT NULL,
   `year_end` char(10) NOT NULL,
   `department` char(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `education`
@@ -41,7 +41,8 @@ CREATE TABLE `education` (
 
 INSERT INTO `education` (`id`, `school_name`, `year_start`, `year_end`, `department`) VALUES
 (1, 'Priority Vocational School of Sukabumi', 2018, '2021', 'Computer and Network Engineering'),
-(3, 'Muhammadiyah University of Sukabumi', 2021, 'Present', 'Informatics');
+(2, 'Muhammadiyah University of Sukabumi', 2021, 'Present', 'Informatics'),
+(4, 'Test Name', 2024, '2025', 'Test Dept');
 
 -- --------------------------------------------------------
 
@@ -51,14 +52,14 @@ INSERT INTO `education` (`id`, `school_name`, `year_start`, `year_end`, `departm
 
 CREATE TABLE `exp` (
   `id` int NOT NULL,
-  `name` char(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `start_month` char(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `name` char(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `start_month` char(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `start_year` year NOT NULL,
-  `end_month` char(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `end_month` char(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `end_year` year NOT NULL,
-  `workplace` char(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `workplace` char(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `working_type` char(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `exp`
@@ -78,12 +79,12 @@ INSERT INTO `exp` (`id`, `name`, `start_month`, `start_year`, `end_month`, `end_
 
 CREATE TABLE `fafr` (
   `id` int NOT NULL,
-  `name` char(55) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `name` char(55) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `introduction` char(255) NOT NULL,
   `skill` char(255) NOT NULL,
   `phone` varchar(17) NOT NULL,
-  `email` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `email` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `fafr`
@@ -102,17 +103,18 @@ CREATE TABLE `projects` (
   `id` int NOT NULL,
   `name` char(40) NOT NULL,
   `type` char(10) NOT NULL,
-  `github_link` varchar(100) NOT NULL,
-  `image_filename` char(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `filename` char(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `projects`
 --
 
-INSERT INTO `projects` (`id`, `name`, `type`, `github_link`, `image_filename`) VALUES
-(1, 'COVID-19 Monitor', 'front-end', 'https://github.com/khw15/COVID19-Monitor', 'covid19-monitor'),
-(2, 'Test Back-end', 'back-end', 'https://example.com/', 'backend-submission');
+INSERT INTO `projects` (`id`, `name`, `type`, `filename`) VALUES
+(1, 'COVID-19 Monitor', 'front-end', 'covid19-monitor'),
+(2, 'Test Back-end', 'back-end', 'backend-submission'),
+(3, 'react-notes', 'front-end', 'react-notes'),
+(4, 'Forum-App', 'front-end', 'Forum-App');
 
 -- --------------------------------------------------------
 
@@ -122,17 +124,18 @@ INSERT INTO `projects` (`id`, `name`, `type`, `github_link`, `image_filename`) V
 
 CREATE TABLE `socials` (
   `id` int NOT NULL,
-  `github` varchar(50) NOT NULL,
-  `discord` varchar(50) NOT NULL,
-  `linkedin` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `type` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `socials`
 --
 
-INSERT INTO `socials` (`id`, `github`, `discord`, `linkedin`) VALUES
-(1, 'https://github.com/khw15', 'https://discordapp.com/users/440894254408007690', 'https://www.linkedin.com/in/fafr');
+INSERT INTO `socials` (`id`, `type`, `link`) VALUES
+(1, 'github', 'https://github.com/khw15'),
+(2, 'linkedin-in', 'https://www.linkedin.com/in/fafr'),
+(3, 'discord', 'https://discordapp.com/users/440894254408007690');
 
 -- --------------------------------------------------------
 
@@ -142,9 +145,9 @@ INSERT INTO `socials` (`id`, `github`, `discord`, `linkedin`) VALUES
 
 CREATE TABLE `tech_stack` (
   `id` int NOT NULL,
-  `tech_name` char(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `tech_name` char(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `percentage` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `tech_stack`
@@ -206,7 +209,7 @@ ALTER TABLE `tech_stack`
 -- AUTO_INCREMENT for table `education`
 --
 ALTER TABLE `education`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `exp`
@@ -224,13 +227,13 @@ ALTER TABLE `fafr`
 -- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `socials`
 --
 ALTER TABLE `socials`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tech_stack`
