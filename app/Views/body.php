@@ -142,7 +142,7 @@
                             <img class="img-fluid" src="<?=base_url('img/projects/' . $project['filename'])?>.jpg" alt="">
                             <div class="portfolio-btn">
                                 <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="<?=base_url('img/projects/' . $project['filename'])?>.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="<?= $project['github_link'] ?>" target="_blank" title="More Details"><i class="fa fa-link"></i></a>
+                                <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/khw15/<?= $project['filename'] ?>" target="_blank" title="More Details"><i class="fa fa-link"></i></a>
                             </div>
                         </div>
                     </div>
