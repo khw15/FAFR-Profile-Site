@@ -139,9 +139,9 @@
                 <?php foreach ($projects as $project): ?>
                     <div class="col-lg-4 col-md-6 portfolio-item <?= $project['type'] ?>">
                         <div class="portfolio-img rounded overflow-hidden">
-                            <img class="img-fluid" src="<?=base_url('img/' . $project['image_filename'])?>.jpg" alt="">
+                            <img class="img-fluid" src="<?=base_url('img/projects/' . $project['filename'])?>.jpg" alt="">
                             <div class="portfolio-btn">
-                                <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="<?=base_url('img/' . $project['image_filename'])?>.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="<?=base_url('img/projects/' . $project['filename'])?>.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="<?= $project['github_link'] ?>" target="_blank" title="More Details"><i class="fa fa-link"></i></a>
                             </div>
                         </div>
@@ -173,9 +173,9 @@
                     <hr class="w-100">
                     <p class="mb-2">Follow me:</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-primary me-2" href="<?=$github?>"><i class="fab fa-github"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="<?=$linkedin?>"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="<?=$discord?>"><i class="fab fa-discord"></i></a>
+                        <?php foreach ($socials as $social): ?>
+                            <a href="<?= $social['link'] ?>" class="btn btn-square btn-primary me-2"><i class="fab fa-<?= $social['type'] ?>"></i></a>
+                        <?php endforeach; ?>
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">

@@ -47,9 +47,7 @@ class Home extends BaseController
             'projects' => $projects, // Store project data under 'projects' key
 
             // Socials
-            'github' => (new SocialsModel())->getGithub()['github'],
-            'discord' => (new SocialsModel())->getDiscord()['discord'],
-            'linkedin' => (new SocialsModel())->getLinkedin()['linkedin']
+            'socials' => (new SocialsModel())->getAllSocials(),
         ];
 
 

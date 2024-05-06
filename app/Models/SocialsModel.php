@@ -7,21 +7,12 @@ use CodeIgniter\Model;
 class SocialsModel extends Model
 {
     protected $table = 'socials';
-    protected $allowedFields = ['github', 'discord', 'linkedin'];
 
     // All links stored in ID 1
-    public function getGithub()
+    public function getAllSocials()
     {
-        return $this->find(1);
-    }
-
-    public function getDiscord()
-    {
-        return $this->find(1);
-    }
-
-    public function getLinkedin()
-    {
-        return $this->find(1);
+        return $this->db->table($this->table)
+            ->get()
+            ->getResultArray();
     }
 }
