@@ -8,15 +8,10 @@ class SkillModel extends Model
 {
     protected $table = 'tech_stack';
 
-    public function getTechName()
+    public function getAllTechStack()
     {
-        return $this->asArray()
-            ->first();
-    }
-
-    public function getPercentage()
-    {
-        return $this->asArray()
-            ->first();
+        return $this->db->table($this->table)
+                    ->get()
+                    ->getResultArray();
     }
 }
