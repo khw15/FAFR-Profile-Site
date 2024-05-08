@@ -25,18 +25,4 @@ class M_Contacts extends Model
                     ->table($this->table)
                     ->insert($data);
     }
-
-    // Send the survey data to the email
-    public function sendEmail($data)
-    {
-        $email = \Config\Services::email();
-
-        $email->setTo('afaisalalmunawar0315@gmail.com');
-        $email->setFrom('web@0315.my.id', $data['name']);
-        $email->setReplyTo($data['email']);
-        $email->setSubject($data['subject']);
-        $email->setMessage($data['message']);
-        $email->setPriority(1);
-        $email->send();
-    }
 }
