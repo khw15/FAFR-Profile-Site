@@ -31,6 +31,9 @@
 
     <!-- Template Stylesheet -->
     <link href="<?=base_url('css/style.css')?>" rel="stylesheet">
+
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
@@ -116,6 +119,18 @@
     <script src="<?=base_url('js/main.js')?>"></script>
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script>
+    function validateForm() {
+    var response = grecaptcha.getResponse();
+        if (response.length === 0) {
+            document.getElementById('captchaError').style.display = 'block';
+            return false;
+        } else {
+            document.getElementById('captchaError').style.display = 'none';
+            return true;
+        }
+    }
     </script>
 </body>
 

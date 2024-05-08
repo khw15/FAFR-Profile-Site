@@ -180,7 +180,7 @@
                 </div>
                 <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <!-- Create the contact form active -->
-                    <form id="contact-form" method="post" action="/post-contacts">
+                    <form id="contact-form" method="post" action="/post-contacts" onsubmit="return validateForm()">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -205,6 +205,11 @@
                                     <textarea class="form-control" id="message" placeholder="Message" name="message" style="height: 150px;" autocomplete="no" required></textarea>
                                     <label for="message">Message</label>
                                 </div>
+                            </div>
+                            <!-- reCAPTCHA Widget -->
+                            <div class="col-12">
+                                <div class="g-recaptcha" data-sitekey="6Lf5C9YpAAAAAD8fx2OAyQl7l4yOcmosDDT7ldTi"></div>
+                                <p id="captchaError" style="color: red; display: none;">Please complete the CAPTCHA</p>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary py-3 px-4">Send Message</button>
