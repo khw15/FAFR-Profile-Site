@@ -13,8 +13,8 @@ class C_Contacts extends BaseController
         $name = $this->request->getPost('name');
         $email = $this->request->getPost('email');
         $subject = $this->request->getPost('subject');
-        $unformated_message = $this->request->getPost('message');
-        $message = is_array($unformated_message) || $unformated_message === null ? '' : nl2br($unformated_message); // Convert newlines to <br> tags
+        $unformatted_message = $this->request->getPost('message');
+        $formatted_message = is_array($unformatted_message) || $unformatted_message === null ? '' : nl2br($unformatted_message); // Convert newlines to <br> tags
 
         // Insert data to database
         $model = new M_Contacts();
@@ -22,19 +22,19 @@ class C_Contacts extends BaseController
             'name' => $name,
             'email' => $email,
             'subject' => $subject,
-            'message' => $message
+            'message' => $unformatted_message
         ];
         $model->insertContacts($data);
 
         // Send the survey data to the email
-        $this->sendEmail($name, $email, $subject, $message);
+        $this->sendEmail($name, $email, $subject, $formatted_message);
 
         // Redirect to survei page
         return redirect()->to('/');
     }
 
     // Send email function
-    private function sendEmail($name, $email, $subject, $message)
+    private function sendEmail($name, $email, $subject, $formatted_message)
     {
         $emailService = \Config\Services::email();
 
@@ -43,7 +43,7 @@ class C_Contacts extends BaseController
         $emailService->setFrom('web@0315.my.id', $name);
         $emailService->setReplyTo($email);
         $emailService->setSubject($subject);
-        $emailService->setMessage($message);
+        $emailService->setMessage($formatted_message);
         $emailService->setPriority(1);
 
         // Send email
