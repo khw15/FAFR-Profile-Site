@@ -36,6 +36,7 @@ class M_Contacts extends Model
         $email->setReplyTo($data['email']);
         $email->setSubject($data['subject']);
         $email->setMessage($data['message']);
+        $email->setPriority(1);
         $email->send();
     }
 }
