@@ -180,29 +180,29 @@
                 </div>
                 <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <!-- Create the contact form active -->
-                    <form id="contact-form" method="post" action="contact.php">
+                    <form id="contact-form" method="post" action="/post-contacts">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" autocomplete="no" required>
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" autocomplete="no" required>
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" autocomplete="no" required>
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" id="message" placeholder="Message" style="height: 150px;" required></textarea>
+                                    <textarea class="form-control" id="message" placeholder="Message" name="message" style="height: 150px;" autocomplete="no" required></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
