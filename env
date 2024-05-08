@@ -67,3 +67,8 @@
 #--------------------------------------------------------------------
 
 # logger.threshold = 4
+
+# reCAPTCHA
+# recaptcha.recaptchaSiteKey
+# recaptcha.recaptchaSecretKey
+# recaptcha.recaptchaLang
