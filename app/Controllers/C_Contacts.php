@@ -24,12 +24,10 @@ class C_Contacts extends BaseController
             'subject' => $subject,
             'message' => $unformatted_message
         ];
-        $model->insertContacts($data);
-
-        // Send the survey data to the email
         $this->sendEmail($name, $email, $subject, $formatted_message);
 
-        // Redirect to survei page
+        $model->insertContacts($data);
+
         return redirect()->to('/');
     }
 
