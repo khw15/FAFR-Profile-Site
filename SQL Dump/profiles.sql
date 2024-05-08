@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 08, 2024 at 04:43 PM
+-- Generation Time: May 08, 2024 at 08:28 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -229,7 +229,7 @@ ALTER TABLE `tech_stack`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `education`
