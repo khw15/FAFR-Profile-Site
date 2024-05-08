@@ -34,5 +34,5 @@ class Recaptcha extends BaseConfig
      *
      * @see http://www.google.com/recaptcha/admin
      */
-    public string $recaptchaLang = 'en';
+    public string $recaptchaLang = '';
 }

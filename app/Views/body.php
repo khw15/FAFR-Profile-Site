@@ -208,7 +208,7 @@
                             </div>
                             <!-- reCAPTCHA Widget -->
                             <div class="col-12">
-                                <div class="g-recaptcha" data-sitekey="6Lf5C9YpAAAAAD8fx2OAyQl7l4yOcmosDDT7ldTi"></div>
+                                <?php echo $widgetTag; ?>
                                 <p id="captchaError" style="color: red; display: none;">Please complete the CAPTCHA</p>
                             </div>
                             <div class="col-12">

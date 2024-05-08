@@ -12,6 +12,14 @@ class Home extends BaseController
 {
     public function body()
     {
+        $captcha = $this->request->getPost('g-recaptcha-response');
+        $recaptcha = service('recaptcha');
+        $response = $recaptcha->verifyResponse($captcha);
+
+        if (isset($response['success']) and $response['success'] === true) {
+            echo "You got it!";
+        }
+
         // Education
         $eduModel = new EduModel();
         $education = $eduModel->findAll();
@@ -48,6 +56,11 @@ class Home extends BaseController
 
             // Socials
             'socials' => (new SocialsModel())->getAllSocials(),
+
+            // Recaptcha
+            'widgetTag' => $recaptcha->getWidget(),
+
+            // Recaptcha Response
         ];
 
 
