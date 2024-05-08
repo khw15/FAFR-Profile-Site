@@ -209,7 +209,7 @@
                             <!-- reCAPTCHA Widget -->
                             <div class="col-12">
                                 <?php echo $widgetTag; ?>
-                                <p id="captchaError" style="color: red; display: none;">Please complete the CAPTCHA</p>
+                                <p id="captchaError" style="color: red; display: none; margin-top: 1rem">Please complete the CAPTCHA</p>
                             </div>
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary py-3 px-4">Send Message</button>
