@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 06, 2024 at 03:32 PM
+-- Generation Time: May 08, 2024 at 04:43 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -18,8 +18,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `myid1_profiles`
+-- Database: `profiles`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id` int NOT NULL,
+  `name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subject` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `message` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -66,7 +80,7 @@ CREATE TABLE `exp` (
 --
 
 INSERT INTO `exp` (`id`, `name`, `start_month`, `start_year`, `end_month`, `end_year`, `workplace`, `working_type`) VALUES
-(1, 'SIB x Dicoding Batch 4', 'August', '2023', 'December', '2023', 'Dicoding', 'Online'),
+(1, 'SIB x Dicoding Batch 5', 'August', '2023', 'December', '2023', 'Dicoding', 'Online'),
 (2, 'Test Name', 'January', '2024', 'April', '2024', 'Test Workplace', 'Online'),
 (3, 'Test Name', 'January', '2025', 'April', '2025', 'Test Workplace', 'Online'),
 (4, 'Test Name', 'January', '2026', 'April', '2026', 'Test Workplace', 'Online');
@@ -166,6 +180,12 @@ INSERT INTO `tech_stack` (`id`, `tech_name`, `percentage`) VALUES
 --
 
 --
+-- Indexes for table `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `education`
 --
 ALTER TABLE `education`
@@ -204,6 +224,12 @@ ALTER TABLE `tech_stack`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `education`
