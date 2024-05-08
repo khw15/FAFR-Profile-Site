@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <img class="img-fluid" src="<?=base_url('img/profile.png')?>" alt="">
+                    <img class="img-fluid" src="<?=base_url('img/profile.png')?>" alt="Images of <?=$name?>" style="max-width: 104%;">
                 </div>
             </div>
         </div>
