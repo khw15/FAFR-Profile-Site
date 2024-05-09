@@ -10,15 +10,11 @@ use App\Models\SocialsModel;
 
 class Home extends BaseController
 {
-    public function body()
+    public function body(): string
     {
-        $captcha = $this->request->getPost('g-recaptcha-response');
-        $recaptcha = service('recaptcha');
-        $response = $recaptcha->verifyResponse($captcha);
-
-        if (isset($response['success']) and $response['success'] === true) {
-            echo "You got it!";
-        }
+        // Recaptcha
+        // $recaptcha = service('recaptcha');
+        helper('recaptcha');
 
         // Education
         $eduModel = new EduModel();
@@ -58,11 +54,18 @@ class Home extends BaseController
             'socials' => (new SocialsModel())->getAllSocials(),
 
             // Recaptcha
-            'widgetTag' => $recaptcha->getWidget(),
-
-            // Recaptcha Response
+            'widgetTag' => getWidget(),
+            'scriptTag' => getScriptTag(),
         ];
 
+        $captcha = $this->request->getPost('g-recaptcha-response');
+        $response = verifyResponse($captcha);
+
+        if ($response['success']) {
+            $data['captcha'] = 'Captcha verification successful';
+        } else {
+            $data['captcha'] = 'Captcha verification failed';
+        }
 
         return view('body', $data);
     }

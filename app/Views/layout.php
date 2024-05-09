@@ -31,9 +31,6 @@
 
     <!-- Template Stylesheet -->
     <link href="<?=base_url('css/style.css')?>" rel="stylesheet">
-
-    <!-- Google reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">

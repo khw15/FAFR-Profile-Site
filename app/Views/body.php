@@ -2,6 +2,7 @@
 
 <?=$this->section('mainbody')?>
     <!-- Header Start -->
+    <?php echo $scriptTag; ?>
     <div class="container-fluid bg-light my-6 mt-0" id="home">
         <div class="container">
             <div class="row g-5 align-items-center">
