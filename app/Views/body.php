@@ -181,7 +181,7 @@
                 </div>
                 <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <!-- Create the contact form active -->
-                    <form id="contact-form" method="post" action="/post-contacts" onsubmit="return validateForm()">
+                    <form id="contact-form" method="post" action="/post-contacts" onsubmit="return validateForm()" enctype="multipart/form-data">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -205,6 +205,13 @@
                                 <div class="form-floating">
                                     <textarea class="form-control" id="message" placeholder="Message" name="message" style="height: 150px;" autocomplete="no" required></textarea>
                                     <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <!-- File upload -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="file" class="form-control" id="file" name="file" placeholder="Attachment" autocomplete="no">
+                                    <label for="file">Attachment</label>
                                 </div>
                             </div>
                             <!-- reCAPTCHA Widget -->

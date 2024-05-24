@@ -3,36 +3,41 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\M_Contacts;
 
 class C_Contacts extends BaseController
 {
     public function index()
     {
+        $file = $this->request->getFile('file');
+
+        // Check if file was uploaded
+        if ($file && $file->isValid()) {
+            $fileName = $file->getName();
+            $file->move('uploads/', $fileName);
+        }
+
         // Get data from form
         $name = $this->request->getPost('name');
         $email = $this->request->getPost('email');
         $subject = $this->request->getPost('subject');
         $unformatted_message = $this->request->getPost('message');
         $formatted_message = is_array($unformatted_message) || $unformatted_message === null ? '' : nl2br($unformatted_message); // Convert newlines to <br> tags
+        $file = isset($fileName) ? $fileName : null;
 
-        // Insert data to database
-        $model = new M_Contacts();
-        $data = [
-            'name' => $name,
-            'email' => $email,
-            'subject' => $subject,
-            'message' => $unformatted_message
-        ];
-        $this->sendEmail($name, $email, $subject, $formatted_message);
+        // Send email only, no database interaction
+        $this->sendEmail($name, $email, $subject, $formatted_message, $file);
 
-        $model->insertContacts($data);
+        // Delete the file after sending the email (optional)
+        if ($file) {
+            unlink('uploads/' . $file);
+        }
 
+        // Redirect to the homepage
         return redirect()->to('/');
     }
 
     // Send email function
-    private function sendEmail($name, $email, $subject, $formatted_message)
+    private function sendEmail($name, $email, $subject, $formatted_message, $file)
     {
         $emailService = \Config\Services::email();
 
@@ -40,6 +45,13 @@ class C_Contacts extends BaseController
         $emailService->setTo('afaisalalmunawar0315@gmail.com');
         $emailService->setFrom('web@0315.my.id', $name);
         $emailService->setReplyTo($email);
+        $emailService->setCC($email);
+        
+        // Attach file if it exists
+        if ($file) {
+            $emailService->attach('uploads/' . $file);
+        }
+        
         $emailService->setSubject($subject);
         $emailService->setMessage($formatted_message);
         $emailService->setPriority(1);
