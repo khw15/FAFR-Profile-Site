@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 08, 2024 at 08:28 PM
+-- Generation Time: May 24, 2024 at 09:32 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -24,20 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contacts`
---
-
-CREATE TABLE `contacts` (
-  `id` int NOT NULL,
-  `name` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `subject` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `message` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `education`
 --
 
@@ -47,7 +33,7 @@ CREATE TABLE `education` (
   `year_start` int NOT NULL,
   `year_end` char(10) NOT NULL,
   `department` char(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `education`
@@ -66,14 +52,14 @@ INSERT INTO `education` (`id`, `school_name`, `year_start`, `year_end`, `departm
 
 CREATE TABLE `exp` (
   `id` int NOT NULL,
-  `name` char(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `start_month` char(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` char(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `start_month` char(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `start_year` year NOT NULL,
-  `end_month` char(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `end_month` char(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `end_year` year NOT NULL,
-  `workplace` char(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `workplace` char(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `working_type` char(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `exp`
@@ -93,12 +79,12 @@ INSERT INTO `exp` (`id`, `name`, `start_month`, `start_year`, `end_month`, `end_
 
 CREATE TABLE `fafr` (
   `id` int NOT NULL,
-  `name` char(55) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` char(55) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `introduction` char(255) NOT NULL,
   `skill` char(255) NOT NULL,
   `phone` varchar(17) NOT NULL,
-  `email` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `email` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `fafr`
@@ -117,8 +103,8 @@ CREATE TABLE `projects` (
   `id` int NOT NULL,
   `name` char(40) NOT NULL,
   `type` char(10) NOT NULL,
-  `filename` char(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `filename` char(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `projects`
@@ -138,9 +124,9 @@ INSERT INTO `projects` (`id`, `name`, `type`, `filename`) VALUES
 
 CREATE TABLE `socials` (
   `id` int NOT NULL,
-  `type` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `link` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `type` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `link` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `socials`
@@ -159,9 +145,9 @@ INSERT INTO `socials` (`id`, `type`, `link`) VALUES
 
 CREATE TABLE `tech_stack` (
   `id` int NOT NULL,
-  `tech_name` char(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tech_name` char(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `percentage` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `tech_stack`
@@ -178,12 +164,6 @@ INSERT INTO `tech_stack` (`id`, `tech_name`, `percentage`) VALUES
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `contacts`
---
-ALTER TABLE `contacts`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `education`
@@ -224,12 +204,6 @@ ALTER TABLE `tech_stack`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `contacts`
---
-ALTER TABLE `contacts`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `education`
