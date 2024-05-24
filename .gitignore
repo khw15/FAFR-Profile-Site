@@ -126,3 +126,4 @@ nb-configuration.xml
 /phpunit*.xml
 *.zip
 app/Config/Email.php
+public/uploads/*
