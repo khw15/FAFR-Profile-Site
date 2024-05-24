@@ -31,7 +31,7 @@ Options -Indexes
 	# request to the front controller, index.php
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule ^([\s\S]*)$ index.php/$1 [L,NC,QSA]
+	RewriteRule ^(.*)$ index.php/$1 [L]
 
 	# Ensure Authorization header is passed along
 	RewriteCond %{HTTP:Authorization} .
@@ -47,7 +47,3 @@ Options -Indexes
 # Disable server signature start
 ServerSignature Off
 # Disable server signature end
-
-# Redirect every http request to https
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
