@@ -7,7 +7,7 @@ use App\Controllers\BaseController;
 class C_Contacts extends BaseController
 {
     public function index()
-    {
+    {  
         $file = $this->request->getFile('file');
 
         // Check if file was uploaded
@@ -24,7 +24,7 @@ class C_Contacts extends BaseController
         $formatted_message = is_array($unformatted_message) || $unformatted_message === null ? '' : nl2br($unformatted_message); // Convert newlines to <br> tags
         $file = isset($fileName) ? $fileName : null;
 
-        // Send email only, no database interaction
+        // Send email
         $this->sendEmail($name, $email, $subject, $formatted_message, $file);
 
         // Delete the file after sending the email (optional)
@@ -33,7 +33,7 @@ class C_Contacts extends BaseController
         }
 
         // Redirect to the homepage
-        return redirect()->to('/');
+        return redirect()->to('/#contact');
     }
 
     // Send email function
