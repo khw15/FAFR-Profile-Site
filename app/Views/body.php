@@ -198,7 +198,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control <?= session('validation') && session('validation')->hasError('email') ? 'is-invalid' : '' ?>" 
+                                    <input type="text" class="form-control <?= session('validation') && session('validation')->hasError('email') ? 'is-invalid' : '' ?>" 
                                         id="email" name="email" placeholder="Your Email" autocomplete="no" value="<?= old('email') ?>"
                                     >
                                     <label for="email">Your Email</label>
