@@ -185,26 +185,52 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" autocomplete="no" required>
+                                    <input type="text" class="form-control <?= session('validation') && session('validation')->hasError('name') ? 'is-invalid' : '' ?>" 
+                                        id="name" name="name" placeholder="Your Name" autocomplete="no" value="<?= old('name') ?>"
+                                    >
                                     <label for="name">Your Name</label>
+                                    <?php if(session('validation') && session('validation')->hasError('name')) : ?>
+                                        <div class="invalid-feedback">
+                                        <?= session('validation')->getError('name') ?>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" autocomplete="no" required>
+                                    <input type="email" class="form-control <?= session('validation') && session('validation')->hasError('email') ? 'is-invalid' : '' ?>" 
+                                        id="email" name="email" placeholder="Your Email" autocomplete="no" value="<?= old('email') ?>"
+                                    >
                                     <label for="email">Your Email</label>
+                                    <?php if(session('validation') && session('validation')->hasError('email')) : ?>
+                                        <div class="invalid-feedback">
+                                        <?= session('validation')->getError('email') ?>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" autocomplete="no" required>
+                                    <input type="text" class="form-control <?= session('validation') && session('validation')->hasError('subject') ? 'is-invalid' : '' ?>" 
+                                        id="subject" name="subject" placeholder="Subject" autocomplete="no" value="<?= old('subject') ?>"
+                                    >
                                     <label for="subject">Subject</label>
+                                    <?php if(session('validation') && session('validation')->hasError('subject')) : ?>
+                                        <div class="invalid-feedback">
+                                        <?= session('validation')->getError('subject') ?>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" id="message" placeholder="Message" name="message" style="height: 150px;" autocomplete="no" required></textarea>
+                                    <textarea class="form-control <?= session('validation') && session('validation')->hasError('message') ? 'is-invalid' : '' ?>" id="message" placeholder="Message" name="message" style="height: 150px;" autocomplete="no"><?= old('message') ?></textarea>
                                     <label for="message">Message</label>
+                                    <?php if(session('validation') && session('validation')->hasError('message')) : ?>
+                                        <div class="invalid-feedback">
+                                        <?= session('validation')->getError('message') ?>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <!-- File upload -->
@@ -215,10 +241,7 @@
                                 </div>
                             </div>
                             <!-- reCAPTCHA Widget -->
-                            <div class="col-12">
-                                <?php echo $widgetTag; ?>
-                                <p id="captchaError" style="color: red; display: none; margin-top: 1rem">Please complete the CAPTCHA</p>
-                            </div>
+                            
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary py-3 px-4">Send Message</button>
                             </div>
