@@ -14,9 +14,11 @@ class C_Contacts extends BaseController
         // Define validation rules
         $validation->setRules([
             'name' => [
-                'rules' => 'required',
+                'rules' => 'required|min_length[3]|max_length[50]',
                 'errors' => [
-                    'required' => 'Name cannot be empty!'
+                    'required' => 'Name cannot be empty!',
+                    'min_length' => 'Name is too short!',
+                    'max_length' => 'Name is too long!'
                 ],
             ],
             'email' => [
@@ -27,15 +29,19 @@ class C_Contacts extends BaseController
                 ],
             ],
             'subject' => [
-                'rules' => 'required',
+                'rules' => 'required|min_length[3]|max_length[30]',
                 'errors' => [
-                    'required' => 'Subject cannot be empty!'
+                    'required' => 'Subject cannot be empty!',
+                    'min_length' => 'Subject is too short!',
+                    'max_length' => 'Subject is too long!',
                 ],
             ],
             'message' => [
-                'rules' => 'required',
+                'rules' => 'required|min_length[10]|max_length[500]',
                 'errors' => [
-                    'required' => 'Message cannot be empty!'
+                    'required' => 'Message cannot be empty!',
+                    'min_length' => 'Message is too short! 10 characters minimum!',
+                    'max_length' => 'Message is too long! 500 characters maximum!',
                 ],
             ],
         ]);
