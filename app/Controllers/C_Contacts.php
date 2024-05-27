@@ -17,8 +17,8 @@ class C_Contacts extends BaseController
                 'rules' => 'required|min_length[3]|max_length[50]',
                 'errors' => [
                     'required' => 'Name cannot be empty!',
-                    'min_length' => 'Name is too short!',
-                    'max_length' => 'Name is too long!'
+                    'min_length' => 'Name is too short! 3 characters minimum!',
+                    'max_length' => 'Name is too long! 50 characters maximum!'
                 ],
             ],
             'email' => [
@@ -29,11 +29,11 @@ class C_Contacts extends BaseController
                 ],
             ],
             'subject' => [
-                'rules' => 'required|min_length[3]|max_length[30]',
+                'rules' => 'required|min_length[3]|max_length[50]',
                 'errors' => [
                     'required' => 'Subject cannot be empty!',
-                    'min_length' => 'Subject is too short!',
-                    'max_length' => 'Subject is too long!',
+                    'min_length' => 'Subject is too short! 3 characters minimum!',
+                    'max_length' => 'Subject is too long! 50 characters maximum!',
                 ],
             ],
             'message' => [
